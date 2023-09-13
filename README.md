@@ -8,7 +8,7 @@ To ensure we understand why our models make the decisions they do, we can add an
 
 <img width="528" alt="image" src="https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/01d82db3-f9b5-4bf8-a687-1b6ca491be15">
 
-## Overcoming The Challenges of ML with the use of Interpretable AI?
+## Overcoming The Challenges of ML with the use of Interpretable AI
 
 Interpretability makes it possible to assess our ML models for factors like bias and fairness, robustness, privacy, causality, and trustworthiness. For example, interpretability can be essential for ensuring the safety and well-being of the people impacted by the model. For example, ML is often used in high-stakes settings where poor performance can lead to harmful outcomes. In healthcare, practitioners need to understand a model's performance to ensure proper care for patients. When it comes to autonomous driving, we don't want the vehicle to hit a parked car, or worse yet, a pedestrian.
 
