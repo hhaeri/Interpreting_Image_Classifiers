@@ -88,4 +88,4 @@ SHAP is a versatile and model-agnostic interpretability framework that goes beyo
 
 Integrated Gradients is an interpretability method used to understand how individual features or pixels in input data contribute to a machine learning model's predictions, particularly deep neural networks. It works by integrating gradients along a path from a baseline input to the actual input, calculating feature attributions. These attributions indicate the importance of each feature and can be visualized to highlight influential regions in data, making it useful for understanding complex model decisions in tasks like image analysis and natural language processing. Integrated Gradients aids in model debugging and building trust in AI systems. While Integrated Gradients can provide valuable insights into the importance of features for individual predictions, it doesn't offer a global feature importance summary across an entire dataset or model. 
 
-[link](README.md#What-is-Interpretable-AI?)
+[link](README.md#what-is-interpretable-ai)
