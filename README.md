@@ -1,7 +1,7 @@
 # Interpreting an Image Classifier Project :blue_car: :truck:
 
 ## Objective
-[](README.md)
+[link](README.md#What-is-Interpretable-AI?)
 In this project, I designed and implemented ... that consisits of sveral stages:
 
 1. ff
