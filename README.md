@@ -1,5 +1,18 @@
-# Interpreting_Image_Classifiers
-Interpreting Image Classifiers using Vision Explainer by OmniXAI
+# Interpreting an Image Classifier Project :blue_car: :truck:
+
+## Objective
+[](README.md)
+In this project, I designed and implemented ... that consisits of sveral stages:
+
+1. ff
+2. fff
+3. 
+
+The primary emphasis of this project is ....
+
+The sections below explain additional details on the background and methods I utilized.
+
+## Table of Content
 
 ## What is Interpretable AI?
 
@@ -11,31 +24,29 @@ To ensure we understand why our models make the decisions they do, we can add an
 
 ## Overcoming The Challenges of ML with the use of Interpretable AI
 
-Interpretability makes it possible to assess our ML models for factors like bias and fairness, robustness, privacy, causality, and trustworthiness. For example, interpretability can be essential for ensuring the safety and well-being of the people impacted by the model. For example, ML is often used in high-stakes settings where poor performance can lead to harmful outcomes. In healthcare, practitioners need to understand a model's performance to ensure proper care for patients. When it comes to autonomous driving, we don't want the vehicle to hit a parked car, or worse yet, a pedestrian.
+Interpretability is a critical aspect of assessing machine learning models, enabling evaluation for factors such as bias, fairness, robustness, privacy, causality, and trustworthiness. In high-stakes applications like healthcare and autonomous driving, understanding model performance is essential to ensure the safety and well-being of individuals. Interpretability also plays a pivotal role in addressing bias in algorithms, which can have real-world consequences, particularly in sectors like finance.
 
-Interpretability also plays a vital role in rooting out bias in algorithms. One recent example of this was the identification of facial and gender bias in the Amazon Recognition Commercial System. Biases like these can have real-world ramifications – In the financial sector, for example, bias can impact who is approved for credit or loans.
+Without interpretability, trust in models is compromised, making it challenging to predict extreme outcomes or identify model shortcomings and biases. Additionally, interpretability aids in recognizing adversarial examples engineered to exploit model vulnerabilities. Incorporating interpretability into models help us to: 
 
-Without interpretability, we can't trust our models – We won't know what our model will predict in extreme cases, and we'll be poorly equipped to identify specific shortcomings or biases. We'll also find it difficult to identify adversarial examples. These are examples that have been engineered to cause our model to fail. By incorporating interpretability into our model, we can see whether it makes similar mistakes as humans, and we can be better equipped to update the model when things go wrong. Interpretability can help us to understand models, improve models, build trust, identify causality, and determine fairness.
+1. Understand Models
 
-- Understand Models
-
-  Fundamentally, interpretability is essential for grasping the rationale behind model decisions. When ML models are employed by policymakers to recommend budget allocations for schools or public services, it's imperative that they comprehend the underlying factors shaping these decisions to ensure a fair distribution of resources. Moreover, in the realm of epidemiology, where ML models predict public health outcomes, gaining insight into the model's decision-making process is invaluable for offering well-informed public health guidance and formulating effective policy proposals.
+  Interpretability is essential for grasping the rationale behind model decisions, gaining insight into the model's decision-making process is invaluable for offering well-informed guidance based on AI models.
   
-- Improve Models
+2. Improve Models
 
-  Interpretability also plays a crucial role in pinpointing the reasons behind a model's failures and making necessary adjustments to enhance its performance. For instance, in the context of sentiment analysis on text, we can examine whether there are common patterns shared among the instances where our model makes errors. Similarly, in the application of ML models in robotics for tasks like pick-and-place, we can identify specific components that the model frequently fails to recognize. Once we've identified these limitations, interpretability provides a valuable means to rectify them, as addressing issues becomes challenging without understanding their root causes. Furthermore, the insights gained from interpretability are instrumental in detecting and mitigating biases within our algorithms, not only enhancing overall model performance but also ensuring fairness across different subpopulations.
+  Interpretability also plays a crucial role in pinpointing the reasons behind a model's failures and making necessary adjustments to enhance its performance. 
   
-- Build Trust
+3. Build Trust
 
-  Comprehending the rationale behind a model's decisions fosters a higher level of trust in its results. For situations where ML is employed for cancer detection; healthcare professionals are more likely to place their trust in the model if it offers an explanation rather than remaining an enigmatic black box with an unknown outcome. However, this trust-building process must be approached with caution. It is imperative to ensure that interpretability faithfully reflects the model's reasoning, genuinely elucidating why the model predicts a certain outcome, rather than fabricating explanations. Otherwise, we risk building false trust in the system.
+  Comprehending the rationale behind a model's decisions fosters a higher level of trust in its results. However to ensure not building false trust in the system, it is imperative to ensure that interpretability faithfully reflects the model's reasoning, genuinely elucidating why the model predicts a certain outcome, rather than fabricating explanations.
   
-- Identify Causality
+4. Identify Causality
 
-  “Causation does not equal correlation.”  In essence, this means that when two factors appear related and coincide in time, it doesn't automatically imply that one is causing the other.  Thus it is important to not jump to causal conclusions based solely on observed correlations, as there may be hidden confounding factors that explain the relationship between variables. Conversely, when it comes to the link between smoking and an increased cancer risk, there is a clear causal relationship since smoking directly elevates the risk. By gaining a deeper understanding of our model, we can more effectively discern causality. For example, if a classifier predicts "y" based on input feature "x," does this signify that "x" causes "y"? Recognizing causality empowers policymakers and researchers to evaluate risk factors, propose interventions, and uncover potentially discriminatory conclusions.
+  Although “causation does not equal correlation”,  by gaining a deeper understanding of our model, we can more effectively discern causality. Recognizing causality empowers policymakers and researchers to evaluate risk factors, propose interventions, and uncover potentially discriminatory conclusions.
   
-- Determine Fairness
+5. Determine Fairness
 
-  By gaining a deeper understanding of our models, we can more effectively evaluate their fairness and identify any potential discriminatory patterns. Real-world examples in finance and the legal system illustrate how algorithmic bias can lead to unjust outcomes. For instance, a 2021 study revealed disparities in loan interest rates and approvals between minority and white borrowers, even after accounting for income. In the justice system, machine learning-generated risk assessments influence decisions like bail and sentencing, but investigations have exposed biases, with black defendants being flagged as future offenders at a higher rate than white defendants. This underscores the urgency of addressing algorithmic bias for a more equitable AI future.
+  By gaining a deeper understanding of our models, we can more effectively evaluate their fairness and identify any potential discriminatory patterns by addressing algorithmic bias for a more equitable AI future.
 
 ## Types of Explanations
 
@@ -52,9 +63,13 @@ Conversely, post-hoc explanations are more intricate and come into play with bla
 
 ## Factors of Interpretability
 Here are the factors to consider when creating good interpretable system:
+
 **Faithfulness**: Do the explanations accurately represent the true reasoning behind the model’s final decision?
+
 **Plausibility**: Is the explanation correct or something we can believe is true, given our current knowledge of the problem?
+
 **Understandable**: Does the explanation use terms that an end user without in- depth knowledge of the system can understand?
+
 **Stability**: Do similar model examples have similar interpretations?
 
 ## Interpreting Image Classifier
@@ -62,3 +77,13 @@ Here are the factors to consider when creating good interpretable system:
 Here I will use three common techniques for generating model explanations: LIME , SHAP , and gradients-based interpretability methods.
 
 ### LIME: Local interpretable model-agnostic explanations
+
+LIME generates simplified, interpretable surrogate models, such as linear regression or decision trees, for individual predictions by perturbing the input data and observing how the model's output changes. These surrogate models approximate the behavior of the complex model for that instance. By analyzing the coefficients or structure of the surrogate model, users can gain insights into which features (variables) had the most significant impact on the model's prediction for that instance. This information can help identify the key factors driving the decision. LIME's explanations make it easier for users to trust the predictions of complex models and debug them when necessary. It provides transparency and helps ensure that model decisions align with domain knowledge and expectations, making it easier to trust and debug machine learning models, particularly in critical applications like healthcare and finance. LIME is a model agnostic tool for model interpretability, it bridges the gap between complex machine learning models and human understanding by offering local, instance-specific explanations for model predictions.
+
+### SHAP: SHapley Additive exPlanations
+
+SHAP is a versatile and model-agnostic interpretability framework that goes beyond traditional feature importance methods to provide a more nuanced understanding of how individual features influence model predictions. At its core, SHAP is based on concepts from cooperative game theory, specifically the Shapley value, which is used to fairly distribute contributions among players in a cooperative game. In the context of machine learning, each feature is treated as a "player," and SHAP calculates the Shapley value for each feature to quantify its contribution to a prediction. Ulinke LIME, SHAP offers both local and global interpretability. Local explanations help users understand why a specific prediction was made by quantifying the impact of individual features for that instance. Global explanations provide an overview of feature importance across the entire dataset, allowing users to identify trends and patterns.
+
+### Integrated Gradients
+
+Integrated Gradients is an interpretability method used to understand how individual features or pixels in input data contribute to a machine learning model's predictions, particularly deep neural networks. It works by integrating gradients along a path from a baseline input to the actual input, calculating feature attributions. These attributions indicate the importance of each feature and can be visualized to highlight influential regions in data, making it useful for understanding complex model decisions in tasks like image analysis and natural language processing. Integrated Gradients aids in model debugging and building trust in AI systems. While Integrated Gradients can provide valuable insights into the importance of features for individual predictions, it doesn't offer a global feature importance summary across an entire dataset or model. 
