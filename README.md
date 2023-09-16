@@ -14,6 +14,8 @@ The sections below explain additional details on the background and methods I ut
 
 ## Table of Content
 
+[What is Interpretable AI?](README.md#what-is-interpretable-ai)
+
 ## What is Interpretable AI?
 
 As industries in a variety of fields, from health care to robotics to commerce become more reliant on Machine Learning models, and especially deep learning models, understanding why models reach their conclusions has become incredibly important. For policymakers, researchers, and regulators who may be making decisions based on these models, understanding the factors that influence a model's conclusion is positively essential. That's where interpretability comes in!
@@ -88,4 +90,4 @@ SHAP is a versatile and model-agnostic interpretability framework that goes beyo
 
 Integrated Gradients is an interpretability method used to understand how individual features or pixels in input data contribute to a machine learning model's predictions, particularly deep neural networks. It works by integrating gradients along a path from a baseline input to the actual input, calculating feature attributions. These attributions indicate the importance of each feature and can be visualized to highlight influential regions in data, making it useful for understanding complex model decisions in tasks like image analysis and natural language processing. Integrated Gradients aids in model debugging and building trust in AI systems. While Integrated Gradients can provide valuable insights into the importance of features for individual predictions, it doesn't offer a global feature importance summary across an entire dataset or model. 
 
-[link](README.md#what-is-interpretable-ai)
+
