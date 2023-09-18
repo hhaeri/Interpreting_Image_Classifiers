@@ -18,6 +18,8 @@ The sections below explain additional details on the background and methods I ut
 
 
 * [Types of Explanations](README.md#Types-of-Explanations)
+* [Factors of Interpretability](README.md#Factors-of-Interpretability)
+* [Machine Learning Interpretability Techniques](README.md#Machine-Learning-Interpretability-Techniques)
 
 [Dataset](README.md#dataset)
 
