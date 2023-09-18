@@ -34,27 +34,25 @@ The sections below explain additional details on the background and methods I ut
 
 As industries in a variety of fields, from health care to robotics to commerce become more reliant on Machine Learning models, and especially deep learning models, understanding why models reach their conclusions has become incredibly important. For policymakers, researchers, and regulators who may be making decisions based on these models, understanding the factors that influence a model's conclusion is positively essential. That's where interpretability comes in!
 
-Interpretability is a critical aspect of assessing machine learning models, enabling evaluation for factors such as bias, fairness, robustness, privacy, causality, and trustworthiness. In high-stakes applications like healthcare and autonomous driving, understanding model performance is essential to ensure the safety and well-being of individuals. Interpretability also plays a pivotal role in addressing bias in algorithms, which can have real-world consequences, particularly in sectors like finance.
+Interpretability is a critical aspect of assessing machine learning models, enabling evaluation for factors such as bias, fairness, robustness, privacy, causality, and trustworthiness. Incorporating interpretability into models help us to: 
 
-Without interpretability, trust in models is compromised, making it challenging to predict extreme outcomes or identify model shortcomings and biases. Additionally, interpretability aids in recognizing adversarial examples engineered to exploit model vulnerabilities. Incorporating interpretability into models help us to: 
-
-1. Understand Models
+* **Understand Models**
 
   Interpretability is essential for grasping the rationale behind model decisions, gaining insight into the model's decision-making process is invaluable for offering well-informed guidance based on AI models.
   
-2. Improve Models
+* **Improve Models**
 
   Interpretability also plays a crucial role in pinpointing the reasons behind a model's failures and making necessary adjustments to enhance its performance. 
   
-3. Build Trust
+* **Build Trust**
 
   Comprehending the rationale behind a model's decisions fosters a higher level of trust in its results. However to ensure not building false trust in the system, it is imperative to ensure that interpretability faithfully reflects the model's reasoning, genuinely elucidating why the model predicts a certain outcome, rather than fabricating explanations.
   
-4. Identify Causality
+* **Identify Causality**
 
   Although “causation does not equal correlation”,  by gaining a deeper understanding of our model, we can more effectively discern causality. Recognizing causality empowers policymakers and researchers to evaluate risk factors, propose interventions, and uncover potentially discriminatory conclusions.
   
-5. Determine Fairness
+* **Determine Fairness**
 
   By gaining a deeper understanding of our models, we can more effectively evaluate their fairness and identify any potential discriminatory patterns by addressing algorithmic bias for a more equitable AI future.
 
@@ -74,13 +72,13 @@ Conversely, post-hoc explanations are more intricate and come into play with bla
 ### Factors of Interpretability
 Here are the factors to consider when creating good interpretable system:
 
-**Faithfulness**: Do the explanations accurately represent the true reasoning behind the model’s final decision?
+* **Faithfulness**: Do the explanations accurately represent the true reasoning behind the model’s final decision?
 
-**Plausibility**: Is the explanation correct or something we can believe is true, given our current knowledge of the problem?
+* **Plausibility**: Is the explanation correct or something we can believe is true, given our current knowledge of the problem?
 
-**Understandable**: Does the explanation use terms that an end user without in- depth knowledge of the system can understand?
+* **Understandable**: Does the explanation use terms that an end user without in- depth knowledge of the system can understand?
 
-**Stability**: Do similar model examples have similar interpretations?
+* **Stability**: Do similar model examples have similar interpretations?
 
 ### Machine Learning Interpretability Techniques
 
