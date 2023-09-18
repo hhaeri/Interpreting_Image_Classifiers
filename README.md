@@ -15,6 +15,7 @@ The sections below explain additional details on the background and methods I ut
 ## Table of Content
 
 [Overcoming The Challenges of ML with the use of Interpretable AI](README.md#overcoming-the-challenges-of-ml-with-the-use-of-interpretable-ai)
+
 *[Types of Explanations](README.md#Types-of-Explanations)
 
 [Dataset](README.md#dataset)
