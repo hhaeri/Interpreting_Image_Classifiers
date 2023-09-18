@@ -15,6 +15,7 @@ The sections below explain additional details on the background and methods I ut
 ## Table of Content
 
 [Overcoming The Challenges of ML with the use of Interpretable AI](README.md#overcoming-the-challenges-of-ml-with-the-use-of-interpretable-ai)
+  [Types of Explanations](README.md#Types-of-Explanations)
 
 [Dataset](README.md#dataset)
 
@@ -51,20 +52,20 @@ Without interpretability, trust in models is compromised, making it challenging 
 
   By gaining a deeper understanding of our models, we can more effectively evaluate their fairness and identify any potential discriminatory patterns by addressing algorithmic bias for a more equitable AI future.
 
-## Types of Explanations
+### Types of Explanations
 
-### Global vs. Local
+#### Global vs. Local
 
 
 Global explanations offer an insightful way to evaluate a model's overall performance across different dimensions. They provide an explanation of how a model makes decisions overall. For instance, linear regression and decision tree models inherently provide global explanations. Conversely, local explanations serve the purpose of elucidating a specific prediction. This approach delves into the factors influencing a single decision, utilizing tools like heatmaps or rationales to provide clarity and context for that particular outcome.
 
-### Inherent vs. Post_hoc
+#### Inherent vs. Post_hoc
 
 Inherent explanations are seamlessly integrated into the model, while post-hoc explanations necessitate the application of external techniques. Inherent explanations are the most straightforward to acquire because they are an integral part of the model itself. Models like linear regression, decision trees, and natural language explanations are inherently interpretable, as they inherently embed information about the decision boundaries and the reasoning behind a classifier's outputs.
 
 Conversely, post-hoc explanations are more intricate and come into play with black-box models. These models, such as neural networks, don't readily reveal their decision-making process. Therefore, to comprehend how such models arrive at their decisions, we must employ external methods to extract explanations that are intelligible to humans.
 
-## Factors of Interpretability
+### Factors of Interpretability
 Here are the factors to consider when creating good interpretable system:
 
 **Faithfulness**: Do the explanations accurately represent the true reasoning behind the model’s final decision?
@@ -75,19 +76,19 @@ Here are the factors to consider when creating good interpretable system:
 
 **Stability**: Do similar model examples have similar interpretations?
 
-## Interpreting Image Classifier
+### Machine Learning Interpretability Techniques
 
 Here I will use three common techniques for generating model explanations: LIME , SHAP , and gradients-based interpretability methods.
 
-### LIME: Local interpretable model-agnostic explanations
+#### LIME: Local interpretable model-agnostic explanations
 
 LIME generates simplified, interpretable surrogate models, such as linear regression or decision trees, for individual predictions by perturbing the input data and observing how the model's output changes. These surrogate models approximate the behavior of the complex model for that instance. By analyzing the coefficients or structure of the surrogate model, users can gain insights into which features (variables) had the most significant impact on the model's prediction for that instance. This information can help identify the key factors driving the decision. LIME's explanations make it easier for users to trust the predictions of complex models and debug them when necessary. It provides transparency and helps ensure that model decisions align with domain knowledge and expectations, making it easier to trust and debug machine learning models, particularly in critical applications like healthcare and finance. LIME is a model agnostic tool for model interpretability, it bridges the gap between complex machine learning models and human understanding by offering local, instance-specific explanations for model predictions.
 
-### SHAP: SHapley Additive exPlanations
+#### SHAP: SHapley Additive exPlanations
 
 SHAP is a versatile and model-agnostic interpretability framework that goes beyond traditional feature importance methods to provide a more nuanced understanding of how individual features influence model predictions. At its core, SHAP is based on concepts from cooperative game theory, specifically the Shapley value, which is used to fairly distribute contributions among players in a cooperative game. In the context of machine learning, each feature is treated as a "player," and SHAP calculates the Shapley value for each feature to quantify its contribution to a prediction. Ulinke LIME, SHAP offers both local and global interpretability. Local explanations help users understand why a specific prediction was made by quantifying the impact of individual features for that instance. Global explanations provide an overview of feature importance across the entire dataset, allowing users to identify trends and patterns.
 
-### Integrated Gradients
+#### Integrated Gradients
 
 Integrated Gradients is an interpretability method used to understand how individual features or pixels in input data contribute to a machine learning model's predictions, particularly deep neural networks. It works by integrating gradients along a path from a baseline input to the actual input, calculating feature attributions. These attributions indicate the importance of each feature and can be visualized to highlight influential regions in data, making it useful for understanding complex model decisions in tasks like image analysis and natural language processing. Integrated Gradients aids in model debugging and building trust in AI systems. While Integrated Gradients can provide valuable insights into the importance of features for individual predictions, it doesn't offer a global feature importance summary across an entire dataset or model. 
 
