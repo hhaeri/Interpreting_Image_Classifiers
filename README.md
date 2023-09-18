@@ -14,17 +14,18 @@ The sections below explain additional details on the background and methods I ut
 
 ## Table of Content
 
-[What is Interpretable AI?](README.md#what-is-interpretable-ai)
+[Overcoming The Challenges of ML with the use of Interpretable AI](README.md#overcoming-the-challenges-of-ml-with-the-use-of-interpretable-ai)
 
-## What is Interpretable AI?
+[Dataset](README.md#dataset)
 
-As industries in a variety of fields, from health care to robotics to commerce become more reliant on Machine Learning models, and especially deep learning models, understanding why models reach their conclusions has become incredibly important. For policymakers, researchers, and regulators who may be making decisions based on these models, understanding the factors that influence a model's conclusion is positively essential. That's where interpretability comes in!
+[Model](README.md#model)
 
-To ensure we understand why our models make the decisions they do, we can add an interpretability step between the train and evaluate phases! Of course, since the ML development process is iterative, we won't just be considering interpretability once. Instead, we'll be revisiting it throughout the development process.
+[Image Classifier Interpretation](README.md#image-classifier-interpretation)
 
-<img width="528" alt="image" src="https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/01d82db3-f9b5-4bf8-a687-1b6ca491be15">
 
 ## Overcoming The Challenges of ML with the use of Interpretable AI
+
+As industries in a variety of fields, from health care to robotics to commerce become more reliant on Machine Learning models, and especially deep learning models, understanding why models reach their conclusions has become incredibly important. For policymakers, researchers, and regulators who may be making decisions based on these models, understanding the factors that influence a model's conclusion is positively essential. That's where interpretability comes in!
 
 Interpretability is a critical aspect of assessing machine learning models, enabling evaluation for factors such as bias, fairness, robustness, privacy, causality, and trustworthiness. In high-stakes applications like healthcare and autonomous driving, understanding model performance is essential to ensure the safety and well-being of individuals. Interpretability also plays a pivotal role in addressing bias in algorithms, which can have real-world consequences, particularly in sectors like finance.
 
@@ -90,4 +91,8 @@ SHAP is a versatile and model-agnostic interpretability framework that goes beyo
 
 Integrated Gradients is an interpretability method used to understand how individual features or pixels in input data contribute to a machine learning model's predictions, particularly deep neural networks. It works by integrating gradients along a path from a baseline input to the actual input, calculating feature attributions. These attributions indicate the importance of each feature and can be visualized to highlight influential regions in data, making it useful for understanding complex model decisions in tasks like image analysis and natural language processing. Integrated Gradients aids in model debugging and building trust in AI systems. While Integrated Gradients can provide valuable insights into the importance of features for individual predictions, it doesn't offer a global feature importance summary across an entire dataset or model. 
 
+## Dataset
 
+## Model
+
+## Image Classifier Interpretation
