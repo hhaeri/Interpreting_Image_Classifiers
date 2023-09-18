@@ -98,6 +98,39 @@ Integrated Gradients is an interpretability method used to understand how indivi
 
 ## Dataset
 
+In this project, I utilized images of trucks and cars sourced from the extensive COCO (Common Objects in Context) dataset to showcase the interpretability capabilities of model-agnostic explainers I introduced earlier (SHAP, LIME, and IG). The COCO dataset boasts an impressive scale, comprising over 200,000 images and containing more than 1.5 million object instances. These images encompass a wide array of scenes and situations, meticulously annotated across approximately 80 distinct object categories. Notably, COCO's annotations encompass over 330,000 object instances, precisely delineating bounding boxes, and it includes textual descriptions for nearly 91,000 images. 
+
 ## Image Classifier Model
 
+The model considered here is a ResNet model pretrained on ImageNet, renowned for its capabilities in image classification. ImageNet (a large-scale dataset with 14 million of labeled images spanning more than 20,000 categories) has played a pivotal role in training deep learning models for various vision tasks. By leveraging the transfer learning provided by the pretrained ResNet model, we can apply its learned features to our specific image classification problem, enhancing our model's ability to recognize and differentiate between objects in the COCO dataset. 
+
 ## Image Classifier Interpretation
+
+For interpreting a classification task, there are multiple dimensions to choose from as explained above (Global vs Local, Model agnostic vs. specific, Inherent vs. post hoc). I will be using a Model agnostic post hoc method and deploy it at a local scale.
+
+Specifically, I will use LIME, SHAP, and integrated-gradient in this project. For each of these algorithms, I will be documenting the compute time and visualizing their explanations. At the end of the project, I'll be comparing the three evaluation approaches and assessing which I agree with most.
+
+To construct my image classification model explainer, I employed the Vision Explainer tool by OmniXAI. OmniXAI (Omni eXplainable AI) is a Python library for explainable AI (XAI). OmniXAI aims to be a one-stop comprehensive library that makes explainable AI easy for data scientists, ML researchers and practitioners who need explanation for various types of data, models and explanation methods at different stages of ML process. The class VisionExplainer is designed for vision tasks. VisionExplainer provides a unified easy-to-use interface for all the supported explainers such as LIME, SHAP, IG, etc. 
+
+to initialize VisionExplainer, we need to set the following parameters:
+
+* explainers: The names of the explainers to apply, e.g., [“lime”, “ig”, “ce”].
+
+* model: The ML model to explain, e.g., a scikit-learn model, a tensorflow model, a pytorch model or a black-box prediction function.
+
+* preprocess: The preprocessing function converting the raw data (a Image instance) into the inputs of model.
+
+* postprocess (optional): The postprocessing function transforming the outputs of model to a user-specific form, e.g., the predicted probability for each class.
+
+* mode: The task type, e.g., “classification” or “regression”.
+
+After the explainations are created by OmniXAI, we can then plot the generated explainations in IPython:
+
+Model Prediction:
+![newplot](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/2352eda3-321a-40b2-ace9-50c3a0b8db67)
+LIME:
+![newplot (7)](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/a6e993a7-1552-48ba-9626-1797653bb898)
+SHAP:
+![newplot (8)](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/d36d36c4-ed72-4ccb-8f85-2a85f47894ea)
+Integrated Gradient:
+![newplot (9)](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/3f5ad744-f3fb-4b0d-b212-518cce0543e7)
