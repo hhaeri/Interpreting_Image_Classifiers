@@ -139,6 +139,7 @@ SHAP:
 Integrated Gradient:
 ![newplot (9)](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/3f5ad744-f3fb-4b0d-b212-518cce0543e7)
 
+
 ### Final Thoughts
 
 By generating and visualizing the local explanations for couple of images, we can gain knowledge about the hidden logic inside the black box AI models. LIME's heatmaps highlighs parts of each image that led to the prediction. Similarly, SHAP and integrated gradients overlay and score images depict the regions that influence the model's predictions. The integrated gradients explainer method did a better job of interpreting images because it takes a more comprehensive approach. By considering the model's behavior across all pixels, integrated gradients can identify the most relevant pixels that consistently influence predictions. This provides a robust importance score for each pixel in the entire image. In contrast, SHAP and LIME are more localized in their explanations, so they may not reveal global patterns. The universal view of integrated gradients gives it an advantage for highlighting what the model deems most important. 
