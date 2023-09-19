@@ -4,13 +4,15 @@
 
 In this project, I designed and implemented an image classifier interpretation tool that consisits of several stages:
 
-1. ff
-2. fff
-3. 
+1. Training an image classification model from scratch or utilizing a pre-trained model
+2. Employing this model to generate predictions for chosen images
+4. Employing model-agnostic interpretation tools to delve into the underlying rationales guiding the model's decisions
 
-The primary emphasis of this project is ....
+The primary emphasis of this project is to understand how Interpretable AI tools can be leveraged to gain insight about the hidden logic inside the black box AI models that influence a model's decision making. In this project I employed the Vision Explainer tool by OmniXAI (a Python library for explainable AI) to construct an image classifier model explainer.
 
-The sections below explain additional details on the background and methods I utilized.
+The central focus of this project revolves around exploring the potential of interpretable AI tools to gain insights about the hidden logic inside the back box AI models that influence their decision-making processes. In this project I used the Vision Explainer tool by OmniXAI(a Python library for explainable AI) to construct an image classifier model explainer.
+
+Further discussion on the project's background and the methodologies employed can be found in the subsequent sections.
 
 ## Table of Content
 
@@ -28,6 +30,8 @@ The sections below explain additional details on the background and methods I ut
 [Model](README.md#model)
 
 [Image Classifier Interpretation](README.md#image-classifier-interpretation)
+
+[Final Thoughts](README.md#final-thoughts)
 
 
 ## Overcoming The Challenges of ML with the use of Interpretable AI
