@@ -2,7 +2,7 @@
 
 ## Objective
 
-In this project, I designed and implemented ... that consisits of sveral stages:
+In this project, I designed and implemented an image classifier interpretation tool that consisits of several stages:
 
 1. ff
 2. fff
@@ -100,6 +100,10 @@ Integrated Gradients is an interpretability method used to understand how indivi
 
 In this project, I utilized images of trucks and cars sourced from the extensive COCO (Common Objects in Context) dataset to showcase the interpretability capabilities of model-agnostic explainers I introduced earlier (SHAP, LIME, and IG). The COCO dataset boasts an impressive scale, comprising over 200,000 images and containing more than 1.5 million object instances. These images encompass a wide array of scenes and situations, meticulously annotated across approximately 80 distinct object categories. Notably, COCO's annotations encompass over 330,000 object instances, precisely delineating bounding boxes, and it includes textual descriptions for nearly 91,000 images. 
 
+Here is one example image from the dataset I will use to explain the image classifier model discussed in the next section:
+
+![image](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/7c2c8953-fdec-4c2f-840d-045d7654ffc9)
+
 ## Image Classifier Model
 
 The model considered here is a ResNet model pretrained on ImageNet, renowned for its capabilities in image classification. ImageNet (a large-scale dataset with 14 million of labeled images spanning more than 20,000 categories) has played a pivotal role in training deep learning models for various vision tasks. By leveraging the transfer learning provided by the pretrained ResNet model, we can apply its learned features to our specific image classification problem, enhancing our model's ability to recognize and differentiate between objects in the COCO dataset. 
@@ -114,7 +118,7 @@ To construct my image classification model explainer, I employed the Vision Expl
 
 to initialize VisionExplainer, we need to set the following parameters:
 
-* explainers: The names of the explainers to apply, e.g., [“lime”, “ig”, “ce”].
+* explainers: The names of the explainers to apply, e.g., [“lime”, “ig”, “shap”].
 
 * model: The ML model to explain, e.g., a scikit-learn model, a tensorflow model, a pytorch model or a black-box prediction function.
 
@@ -134,3 +138,7 @@ SHAP:
 ![newplot (8)](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/d36d36c4-ed72-4ccb-8f85-2a85f47894ea)
 Integrated Gradient:
 ![newplot (9)](https://github.com/hhaeri/Interpreting_Image_Classifiers/assets/91407046/3f5ad744-f3fb-4b0d-b212-518cce0543e7)
+
+### Final Thoughts
+
+By generating and visualizing the local explanations for couple of images, we can gain knowledge about the hidden logic inside the black box AI models. LIME's heatmaps highlighs parts of each image that led to the prediction. Similarly, SHAP and integrated gradients overlay and score images depict the regions that influence the model's predictions. The integrated gradients explainer method did a better job of interpreting images because it takes a more comprehensive approach. By considering the model's behavior across all pixels, integrated gradients can identify the most relevant pixels that consistently influence predictions. This provides a robust importance score for each pixel in the entire image. In contrast, SHAP and LIME are more localized in their explanations, so they may not reveal global patterns. The universal view of integrated gradients gives it an advantage for highlighting what the model deems most important. 
