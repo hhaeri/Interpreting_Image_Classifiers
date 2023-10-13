@@ -1,4 +1,4 @@
-# Interpreting an Image Classifier Project :blue_car: :truck: 📷
+# Interpreting an Image Classifier :blue_car: :truck: 📷
 
 ## Objective
 
