@@ -27,7 +27,7 @@ Further discussion on the project's background and the methodologies employed ca
 
 [Dataset](README.md#dataset)
 
-[Model](README.md#model)
+[Model](README.md#Image-Classifier-model)
 
 [Image Classifier Interpretation](README.md#image-classifier-interpretation)
 
